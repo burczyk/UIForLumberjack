@@ -7,7 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DDLog.h"
 
-@interface UIForLumberjack : NSObject
+@interface UIForLumberjack : NSObject <UITableViewDataSource, UITableViewDelegate, DDLogger>
+
+@property (nonatomic, strong) UITableView *tableView;
+
++ (UIForLumberjack*) sharedInstance;
+
+- (void)showLogInView:(UIView*)view;
+- (void)hideLog;
 
 @end

@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8E809EC01887276900884B89"
-               BuildableName = "libUIForLumberjack.a"
-               BlueprintName = "UIForLumberjack"
-               ReferencedContainer = "container:UIForLumberjack.xcodeproj">
+               BlueprintIdentifier = "8E809F241887404600884B89"
+               BuildableName = "UIForLumberjackExample.app"
+               BlueprintName = "UIForLumberjackExample"
+               ReferencedContainer = "container:UIForLumberjackExample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,23 +32,22 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8E809ED01887276900884B89"
-               BuildableName = "UIForLumberjackTests.xctest"
-               BlueprintName = "UIForLumberjackTests"
-               ReferencedContainer = "container:UIForLumberjack.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8E809F0618872AE200884B89"
-               BuildableName = "UIForLumberjackTestAppTests.xctest"
-               BlueprintName = "UIForLumberjackTestAppTests"
-               ReferencedContainer = "container:UIForLumberjack.xcodeproj">
+               BlueprintIdentifier = "8E809F4B1887404600884B89"
+               BuildableName = "UIForLumberjackExampleTests.xctest"
+               BlueprintName = "UIForLumberjackExampleTests"
+               ReferencedContainer = "container:UIForLumberjackExample.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "8E809F241887404600884B89"
+            BuildableName = "UIForLumberjackExample.app"
+            BlueprintName = "UIForLumberjackExample"
+            ReferencedContainer = "container:UIForLumberjackExample.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
@@ -59,6 +58,15 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "8E809F241887404600884B89"
+            BuildableName = "UIForLumberjackExample.app"
+            BlueprintName = "UIForLumberjackExample"
+            ReferencedContainer = "container:UIForLumberjackExample.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -68,6 +76,15 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "8E809F241887404600884B89"
+            BuildableName = "UIForLumberjackExample.app"
+            BlueprintName = "UIForLumberjackExample"
+            ReferencedContainer = "container:UIForLumberjackExample.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

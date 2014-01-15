@@ -1,0 +1,495 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8E809F291887404600884B89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E809F281887404600884B89 /* Foundation.framework */; };
+		8E809F2B1887404600884B89 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E809F2A1887404600884B89 /* CoreGraphics.framework */; };
+		8E809F2D1887404600884B89 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E809F2C1887404600884B89 /* UIKit.framework */; };
+		8E809F331887404600884B89 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8E809F311887404600884B89 /* InfoPlist.strings */; };
+		8E809F351887404600884B89 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E809F341887404600884B89 /* main.m */; };
+		8E809F391887404600884B89 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E809F381887404600884B89 /* AppDelegate.m */; };
+		8E809F3C1887404600884B89 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E809F3A1887404600884B89 /* Main_iPhone.storyboard */; };
+		8E809F3F1887404600884B89 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E809F3D1887404600884B89 /* Main_iPad.storyboard */; };
+		8E809F421887404600884B89 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E809F411887404600884B89 /* FirstViewController.m */; };
+		8E809F451887404600884B89 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E809F441887404600884B89 /* SecondViewController.m */; };
+		8E809F471887404600884B89 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E809F461887404600884B89 /* Images.xcassets */; };
+		8E809F4E1887404600884B89 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E809F4D1887404600884B89 /* XCTest.framework */; };
+		8E809F4F1887404600884B89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E809F281887404600884B89 /* Foundation.framework */; };
+		8E809F501887404600884B89 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E809F2C1887404600884B89 /* UIKit.framework */; };
+		8E809F581887404700884B89 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8E809F561887404700884B89 /* InfoPlist.strings */; };
+		8E809F5A1887404700884B89 /* UIForLumberjackExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E809F591887404700884B89 /* UIForLumberjackExampleTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8E809F511887404600884B89 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8E809F1D1887404600884B89 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8E809F241887404600884B89;
+			remoteInfo = UIForLumberjackExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8E809F251887404600884B89 /* UIForLumberjackExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIForLumberjackExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E809F281887404600884B89 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8E809F2A1887404600884B89 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8E809F2C1887404600884B89 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8E809F301887404600884B89 /* UIForLumberjackExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UIForLumberjackExample-Info.plist"; sourceTree = "<group>"; };
+		8E809F321887404600884B89 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8E809F341887404600884B89 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8E809F361887404600884B89 /* UIForLumberjackExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIForLumberjackExample-Prefix.pch"; sourceTree = "<group>"; };
+		8E809F371887404600884B89 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8E809F381887404600884B89 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8E809F3B1887404600884B89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		8E809F3E1887404600884B89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		8E809F401887404600884B89 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		8E809F411887404600884B89 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		8E809F431887404600884B89 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		8E809F441887404600884B89 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		8E809F461887404600884B89 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8E809F4C1887404600884B89 /* UIForLumberjackExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIForLumberjackExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E809F4D1887404600884B89 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		8E809F551887404700884B89 /* UIForLumberjackExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UIForLumberjackExampleTests-Info.plist"; sourceTree = "<group>"; };
+		8E809F571887404700884B89 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8E809F591887404700884B89 /* UIForLumberjackExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIForLumberjackExampleTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8E809F221887404600884B89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E809F2B1887404600884B89 /* CoreGraphics.framework in Frameworks */,
+				8E809F2D1887404600884B89 /* UIKit.framework in Frameworks */,
+				8E809F291887404600884B89 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E809F491887404600884B89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E809F4E1887404600884B89 /* XCTest.framework in Frameworks */,
+				8E809F501887404600884B89 /* UIKit.framework in Frameworks */,
+				8E809F4F1887404600884B89 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8E809F1C1887404600884B89 = {
+			isa = PBXGroup;
+			children = (
+				8E809F2E1887404600884B89 /* UIForLumberjackExample */,
+				8E809F531887404600884B89 /* UIForLumberjackExampleTests */,
+				8E809F271887404600884B89 /* Frameworks */,
+				8E809F261887404600884B89 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8E809F261887404600884B89 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8E809F251887404600884B89 /* UIForLumberjackExample.app */,
+				8E809F4C1887404600884B89 /* UIForLumberjackExampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8E809F271887404600884B89 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E809F281887404600884B89 /* Foundation.framework */,
+				8E809F2A1887404600884B89 /* CoreGraphics.framework */,
+				8E809F2C1887404600884B89 /* UIKit.framework */,
+				8E809F4D1887404600884B89 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8E809F2E1887404600884B89 /* UIForLumberjackExample */ = {
+			isa = PBXGroup;
+			children = (
+				8E809F371887404600884B89 /* AppDelegate.h */,
+				8E809F381887404600884B89 /* AppDelegate.m */,
+				8E809F3A1887404600884B89 /* Main_iPhone.storyboard */,
+				8E809F3D1887404600884B89 /* Main_iPad.storyboard */,
+				8E809F401887404600884B89 /* FirstViewController.h */,
+				8E809F411887404600884B89 /* FirstViewController.m */,
+				8E809F431887404600884B89 /* SecondViewController.h */,
+				8E809F441887404600884B89 /* SecondViewController.m */,
+				8E809F461887404600884B89 /* Images.xcassets */,
+				8E809F2F1887404600884B89 /* Supporting Files */,
+			);
+			path = UIForLumberjackExample;
+			sourceTree = "<group>";
+		};
+		8E809F2F1887404600884B89 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8E809F301887404600884B89 /* UIForLumberjackExample-Info.plist */,
+				8E809F311887404600884B89 /* InfoPlist.strings */,
+				8E809F341887404600884B89 /* main.m */,
+				8E809F361887404600884B89 /* UIForLumberjackExample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8E809F531887404600884B89 /* UIForLumberjackExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				8E809F591887404700884B89 /* UIForLumberjackExampleTests.m */,
+				8E809F541887404700884B89 /* Supporting Files */,
+			);
+			path = UIForLumberjackExampleTests;
+			sourceTree = "<group>";
+		};
+		8E809F541887404700884B89 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8E809F551887404700884B89 /* UIForLumberjackExampleTests-Info.plist */,
+				8E809F561887404700884B89 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8E809F241887404600884B89 /* UIForLumberjackExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E809F5D1887404700884B89 /* Build configuration list for PBXNativeTarget "UIForLumberjackExample" */;
+			buildPhases = (
+				8E809F211887404600884B89 /* Sources */,
+				8E809F221887404600884B89 /* Frameworks */,
+				8E809F231887404600884B89 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UIForLumberjackExample;
+			productName = UIForLumberjackExample;
+			productReference = 8E809F251887404600884B89 /* UIForLumberjackExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8E809F4B1887404600884B89 /* UIForLumberjackExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E809F601887404700884B89 /* Build configuration list for PBXNativeTarget "UIForLumberjackExampleTests" */;
+			buildPhases = (
+				8E809F481887404600884B89 /* Sources */,
+				8E809F491887404600884B89 /* Frameworks */,
+				8E809F4A1887404600884B89 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8E809F521887404600884B89 /* PBXTargetDependency */,
+			);
+			name = UIForLumberjackExampleTests;
+			productName = UIForLumberjackExampleTests;
+			productReference = 8E809F4C1887404600884B89 /* UIForLumberjackExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8E809F1D1887404600884B89 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = Sigmapoint;
+				TargetAttributes = {
+					8E809F4B1887404600884B89 = {
+						TestTargetID = 8E809F241887404600884B89;
+					};
+				};
+			};
+			buildConfigurationList = 8E809F201887404600884B89 /* Build configuration list for PBXProject "UIForLumberjackExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8E809F1C1887404600884B89;
+			productRefGroup = 8E809F261887404600884B89 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8E809F241887404600884B89 /* UIForLumberjackExample */,
+				8E809F4B1887404600884B89 /* UIForLumberjackExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8E809F231887404600884B89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E809F3F1887404600884B89 /* Main_iPad.storyboard in Resources */,
+				8E809F471887404600884B89 /* Images.xcassets in Resources */,
+				8E809F3C1887404600884B89 /* Main_iPhone.storyboard in Resources */,
+				8E809F331887404600884B89 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E809F4A1887404600884B89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E809F581887404700884B89 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8E809F211887404600884B89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E809F451887404600884B89 /* SecondViewController.m in Sources */,
+				8E809F391887404600884B89 /* AppDelegate.m in Sources */,
+				8E809F421887404600884B89 /* FirstViewController.m in Sources */,
+				8E809F351887404600884B89 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E809F481887404600884B89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E809F5A1887404700884B89 /* UIForLumberjackExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8E809F521887404600884B89 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8E809F241887404600884B89 /* UIForLumberjackExample */;
+			targetProxy = 8E809F511887404600884B89 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8E809F311887404600884B89 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E809F321887404600884B89 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8E809F3A1887404600884B89 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E809F3B1887404600884B89 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		8E809F3D1887404600884B89 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E809F3E1887404600884B89 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		8E809F561887404700884B89 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E809F571887404700884B89 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8E809F5B1887404700884B89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8E809F5C1887404700884B89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8E809F5E1887404700884B89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UIForLumberjackExample/UIForLumberjackExample-Prefix.pch";
+				INFOPLIST_FILE = "UIForLumberjackExample/UIForLumberjackExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8E809F5F1887404700884B89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UIForLumberjackExample/UIForLumberjackExample-Prefix.pch";
+				INFOPLIST_FILE = "UIForLumberjackExample/UIForLumberjackExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		8E809F611887404700884B89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/UIForLumberjackExample.app/UIForLumberjackExample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UIForLumberjackExample/UIForLumberjackExample-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "UIForLumberjackExampleTests/UIForLumberjackExampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		8E809F621887404700884B89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/UIForLumberjackExample.app/UIForLumberjackExample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UIForLumberjackExample/UIForLumberjackExample-Prefix.pch";
+				INFOPLIST_FILE = "UIForLumberjackExampleTests/UIForLumberjackExampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8E809F201887404600884B89 /* Build configuration list for PBXProject "UIForLumberjackExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E809F5B1887404700884B89 /* Debug */,
+				8E809F5C1887404700884B89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8E809F5D1887404700884B89 /* Build configuration list for PBXNativeTarget "UIForLumberjackExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E809F5E1887404700884B89 /* Debug */,
+				8E809F5F1887404700884B89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8E809F601887404700884B89 /* Build configuration list for PBXNativeTarget "UIForLumberjackExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E809F611887404700884B89 /* Debug */,
+				8E809F621887404700884B89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8E809F1D1887404600884B89 /* Project object */;
+}

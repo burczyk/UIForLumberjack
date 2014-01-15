@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>UIForLumberjack.xcscheme</key>
+		<key>UIForLumberjackExample.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,22 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>8E809EC01887276900884B89</key>
+		<key>8E809F241887404600884B89</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8E809ED01887276900884B89</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8E809EEF18872AE200884B89</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8E809F0618872AE200884B89</key>
+		<key>8E809F4B1887404600884B89</key>
 		<dict>
 			<key>primary</key>
 			<true/>

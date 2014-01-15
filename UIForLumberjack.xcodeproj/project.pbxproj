@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		688A0CA1432C4EA89DEB69C7 /* libPods-UIForLumberjack.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7221CEBF0C994F39AA20C1E8 /* libPods-UIForLumberjack.a */; };
 		8E809EC51887276900884B89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E809EC41887276900884B89 /* Foundation.framework */; };
 		8E809ECA1887276900884B89 /* UIForLumberjack.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8E809EC91887276900884B89 /* UIForLumberjack.h */; };
 		8E809ECC1887276900884B89 /* UIForLumberjack.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E809ECB1887276900884B89 /* UIForLumberjack.m */; };
@@ -16,6 +17,7 @@
 		8E809ED91887276900884B89 /* libUIForLumberjack.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E809EC11887276900884B89 /* libUIForLumberjack.a */; };
 		8E809EDF1887276900884B89 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8E809EDD1887276900884B89 /* InfoPlist.strings */; };
 		8E809EE11887276900884B89 /* UIForLumberjackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E809EE01887276900884B89 /* UIForLumberjackTests.m */; };
+		8E809EEB1887290200884B89 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E809EEA1887290200884B89 /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1CFB229FA4B74E1981FB3493 /* Pods-UIForLumberjack.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIForLumberjack.xcconfig"; path = "Pods/Pods-UIForLumberjack.xcconfig"; sourceTree = "<group>"; };
+		7221CEBF0C994F39AA20C1E8 /* libPods-UIForLumberjack.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UIForLumberjack.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E809EC11887276900884B89 /* libUIForLumberjack.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libUIForLumberjack.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E809EC41887276900884B89 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8E809EC81887276900884B89 /* UIForLumberjack-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIForLumberjack-Prefix.pch"; sourceTree = "<group>"; };
@@ -53,6 +57,11 @@
 		8E809EDC1887276900884B89 /* UIForLumberjackTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UIForLumberjackTests-Info.plist"; sourceTree = "<group>"; };
 		8E809EDE1887276900884B89 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8E809EE01887276900884B89 /* UIForLumberjackTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIForLumberjackTests.m; sourceTree = "<group>"; };
+		8E809EEA1887290200884B89 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8E809EF218872AE200884B89 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8E809F0F18872AE200884B89 /* UIForLumberjackTestAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UIForLumberjackTestAppTests-Info.plist"; sourceTree = "<group>"; };
+		8E809F1118872AE200884B89 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8E809F1318872AE200884B89 /* UIForLumberjackTestAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIForLumberjackTestAppTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +69,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E809EEB1887290200884B89 /* UIKit.framework in Frameworks */,
 				8E809EC51887276900884B89 /* Foundation.framework in Frameworks */,
+				688A0CA1432C4EA89DEB69C7 /* libPods-UIForLumberjack.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,8 +94,10 @@
 			children = (
 				8E809EC61887276900884B89 /* UIForLumberjack */,
 				8E809EDA1887276900884B89 /* UIForLumberjackTests */,
+				8E809F0D18872AE200884B89 /* UIForLumberjackTestAppTests */,
 				8E809EC31887276900884B89 /* Frameworks */,
 				8E809EC21887276900884B89 /* Products */,
+				1CFB229FA4B74E1981FB3493 /* Pods-UIForLumberjack.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,9 +113,12 @@
 		8E809EC31887276900884B89 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8E809EEA1887290200884B89 /* UIKit.framework */,
 				8E809EC41887276900884B89 /* Foundation.framework */,
 				8E809ED21887276900884B89 /* XCTest.framework */,
 				8E809ED51887276900884B89 /* UIKit.framework */,
+				7221CEBF0C994F39AA20C1E8 /* libPods-UIForLumberjack.a */,
+				8E809EF218872AE200884B89 /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -143,6 +159,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		8E809F0D18872AE200884B89 /* UIForLumberjackTestAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				8E809F1318872AE200884B89 /* UIForLumberjackTestAppTests.m */,
+				8E809F0E18872AE200884B89 /* Supporting Files */,
+			);
+			path = UIForLumberjackTestAppTests;
+			sourceTree = "<group>";
+		};
+		8E809F0E18872AE200884B89 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8E809F0F18872AE200884B89 /* UIForLumberjackTestAppTests-Info.plist */,
+				8E809F1018872AE200884B89 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,9 +184,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8E809EE41887276900884B89 /* Build configuration list for PBXNativeTarget "UIForLumberjack" */;
 			buildPhases = (
+				A3915936766E4F808E41EA6C /* Check Pods Manifest.lock */,
 				8E809EBD1887276900884B89 /* Sources */,
 				8E809EBE1887276900884B89 /* Frameworks */,
 				8E809EBF1887276900884B89 /* CopyFiles */,
+				B1FC9F7E0F70473396255B86 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -189,6 +225,11 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = Sigmapoint;
+				TargetAttributes = {
+					8E809ED01887276900884B89 = {
+						TestTargetID = 8E809EEF18872AE200884B89;
+					};
+				};
 			};
 			buildConfigurationList = 8E809EBC1887276900884B89 /* Build configuration list for PBXProject "UIForLumberjack" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -218,6 +259,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A3915936766E4F808E41EA6C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B1FC9F7E0F70473396255B86 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-UIForLumberjack-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8E809EBD1887276900884B89 /* Sources */ = {
@@ -251,6 +325,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				8E809EDE1887276900884B89 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8E809F1018872AE200884B89 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E809F1118872AE200884B89 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -330,6 +412,7 @@
 		};
 		8E809EE51887276900884B89 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CFB229FA4B74E1981FB3493 /* Pods-UIForLumberjack.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/UIForLumberjack.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -342,6 +425,7 @@
 		};
 		8E809EE61887276900884B89 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CFB229FA4B74E1981FB3493 /* Pods-UIForLumberjack.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/UIForLumberjack.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -356,6 +440,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/UIForLumberjackTestApp.app/UIForLumberjackTestApp";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -369,6 +454,7 @@
 				);
 				INFOPLIST_FILE = "UIForLumberjackTests/UIForLumberjackTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -377,6 +463,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/UIForLumberjackTestApp.app/UIForLumberjackTestApp";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -386,6 +473,7 @@
 				GCC_PREFIX_HEADER = "UIForLumberjack/UIForLumberjack-Prefix.pch";
 				INFOPLIST_FILE = "UIForLumberjackTests/UIForLumberjackTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
@@ -409,6 +497,7 @@
 				8E809EE61887276900884B89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8E809EE71887276900884B89 /* Build configuration list for PBXNativeTarget "UIForLumberjackTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +506,7 @@
 				8E809EE91887276900884B89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
