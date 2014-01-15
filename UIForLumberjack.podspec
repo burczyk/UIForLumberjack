@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author             = { "Kamil Burczyk" => "kamil.burczyk@gmail.com" }
   s.platform     = :ios, '6.0'
-  s.source       = { :git => "https://github.com/burczyk/UIForLumberjack.git", :commit => "2793b7b01a75c129e727b8ded560dde1e071661d" }
+  s.source       = { :git => "https://github.com/burczyk/UIForLumberjack.git", :tag => "1.0.0" }
   s.source_files  = 'UIForLumberjack', 'UIForLumberjack/**/*.{h,m}'
   s.exclude_files = 'UIForLumberjackExample'
   s.frameworks = 'UIKit', 'Foundation'
