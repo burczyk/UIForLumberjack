@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "UIForLumberjack"
-  s.version      = "0.0.1"
+  s.version      = "1.0.0"
   s.summary      = "iOS UI library to display CocoaLumberjack logs on iOS device"
 
   s.description  = <<-DESC
