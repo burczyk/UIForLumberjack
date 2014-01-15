@@ -14,7 +14,6 @@
 		8E809F351887404600884B89 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E809F341887404600884B89 /* main.m */; };
 		8E809F391887404600884B89 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E809F381887404600884B89 /* AppDelegate.m */; };
 		8E809F3C1887404600884B89 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E809F3A1887404600884B89 /* Main_iPhone.storyboard */; };
-		8E809F3F1887404600884B89 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E809F3D1887404600884B89 /* Main_iPad.storyboard */; };
 		8E809F421887404600884B89 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E809F411887404600884B89 /* FirstViewController.m */; };
 		8E809F451887404600884B89 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E809F441887404600884B89 /* SecondViewController.m */; };
 		8E809F471887404600884B89 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E809F461887404600884B89 /* Images.xcassets */; };
@@ -23,6 +22,7 @@
 		8E809F501887404600884B89 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E809F2C1887404600884B89 /* UIKit.framework */; };
 		8E809F581887404700884B89 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8E809F561887404700884B89 /* InfoPlist.strings */; };
 		8E809F5A1887404700884B89 /* UIForLumberjackExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E809F591887404700884B89 /* UIForLumberjackExampleTests.m */; };
+		98CCACCD41CB47209E2A046A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4FFBA3A0594136AC20468A /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E4FFBA3A0594136AC20468A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E809F251887404600884B89 /* UIForLumberjackExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIForLumberjackExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E809F281887404600884B89 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8E809F2A1887404600884B89 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -47,7 +48,6 @@
 		8E809F371887404600884B89 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8E809F381887404600884B89 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8E809F3B1887404600884B89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		8E809F3E1887404600884B89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		8E809F401887404600884B89 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		8E809F411887404600884B89 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		8E809F431887404600884B89 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
@@ -58,6 +58,7 @@
 		8E809F551887404700884B89 /* UIForLumberjackExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UIForLumberjackExampleTests-Info.plist"; sourceTree = "<group>"; };
 		8E809F571887404700884B89 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8E809F591887404700884B89 /* UIForLumberjackExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIForLumberjackExampleTests.m; sourceTree = "<group>"; };
+		CA5777A29AE34417915CC317 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +69,7 @@
 				8E809F2B1887404600884B89 /* CoreGraphics.framework in Frameworks */,
 				8E809F2D1887404600884B89 /* UIKit.framework in Frameworks */,
 				8E809F291887404600884B89 /* Foundation.framework in Frameworks */,
+				98CCACCD41CB47209E2A046A /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +93,7 @@
 				8E809F531887404600884B89 /* UIForLumberjackExampleTests */,
 				8E809F271887404600884B89 /* Frameworks */,
 				8E809F261887404600884B89 /* Products */,
+				CA5777A29AE34417915CC317 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +113,7 @@
 				8E809F2A1887404600884B89 /* CoreGraphics.framework */,
 				8E809F2C1887404600884B89 /* UIKit.framework */,
 				8E809F4D1887404600884B89 /* XCTest.framework */,
+				4E4FFBA3A0594136AC20468A /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -120,7 +124,6 @@
 				8E809F371887404600884B89 /* AppDelegate.h */,
 				8E809F381887404600884B89 /* AppDelegate.m */,
 				8E809F3A1887404600884B89 /* Main_iPhone.storyboard */,
-				8E809F3D1887404600884B89 /* Main_iPad.storyboard */,
 				8E809F401887404600884B89 /* FirstViewController.h */,
 				8E809F411887404600884B89 /* FirstViewController.m */,
 				8E809F431887404600884B89 /* SecondViewController.h */,
@@ -167,9 +170,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8E809F5D1887404700884B89 /* Build configuration list for PBXNativeTarget "UIForLumberjackExample" */;
 			buildPhases = (
+				96CA9E8F40364CC580FCD0B5 /* Check Pods Manifest.lock */,
 				8E809F211887404600884B89 /* Sources */,
 				8E809F221887404600884B89 /* Frameworks */,
 				8E809F231887404600884B89 /* Resources */,
+				E407FADDC71246FCBA15ACD9 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -236,7 +241,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E809F3F1887404600884B89 /* Main_iPad.storyboard in Resources */,
 				8E809F471887404600884B89 /* Images.xcassets in Resources */,
 				8E809F3C1887404600884B89 /* Main_iPhone.storyboard in Resources */,
 				8E809F331887404600884B89 /* InfoPlist.strings in Resources */,
@@ -252,6 +256,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		96CA9E8F40364CC580FCD0B5 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E407FADDC71246FCBA15ACD9 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8E809F211887404600884B89 /* Sources */ = {
@@ -298,14 +335,6 @@
 				8E809F3B1887404600884B89 /* Base */,
 			);
 			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		8E809F3D1887404600884B89 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8E809F3E1887404600884B89 /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		8E809F561887404700884B89 /* InfoPlist.strings */ = {
@@ -395,6 +424,7 @@
 		};
 		8E809F5E1887404700884B89 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA5777A29AE34417915CC317 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -408,6 +438,7 @@
 		};
 		8E809F5F1887404700884B89 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA5777A29AE34417915CC317 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -480,6 +511,7 @@
 				8E809F5F1887404700884B89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8E809F601887404700884B89 /* Build configuration list for PBXNativeTarget "UIForLumberjackExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -488,6 +520,7 @@
 				8E809F621887404700884B89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

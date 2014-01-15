@@ -7,6 +7,7 @@
 //
 
 #import "FirstViewController.h"
+#import "UIForLumberjack.h"
 
 @interface FirstViewController ()
 
@@ -24,6 +25,10 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)infoButtonPushed:(UIButton *)sender {
+    [[UIForLumberjack sharedInstance] showLogInView:self.view];
 }
 
 @end

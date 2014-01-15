@@ -8,14 +8,34 @@
 
 #import "AppDelegate.h"
 
+#import "DDLog.h"
+#import "DDASLLogger.h"
+#import "DDTTYLogger.h"
+
+#import "UIForLumberjack.h"
+
+int ddLogLevel = LOG_LEVEL_VERBOSE;
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    [self initializeLoggers];
+    
     return YES;
 }
-							
+
+- (void) initializeLoggers {
+    [DDLog addLogger:[DDASLLogger sharedInstance]];
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];
+    [[DDTTYLogger sharedInstance] setColorsEnabled:YES];
+    [[DDTTYLogger sharedInstance] setForegroundColor:[UIColor blueColor] backgroundColor:nil forFlag:LOG_FLAG_VERBOSE];
+    
+    [DDLog addLogger:[UIForLumberjack sharedInstance]];
+    
+    DDLogInfo(@"All loggers added successfully");
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
