@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong) id<DDLogFormatter> logFormatter;
 @property (nonatomic, strong) NSMutableArray *messages;
+@property (nonatomic, strong) NSMutableSet *messagesExpanded;
 @property (nonatomic, strong) NSDateFormatter *dateFormatter;
 
 @end
@@ -23,7 +24,8 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedInstance = [[UIForLumberjack alloc] init];
-        sharedInstance.messages = [@[] mutableCopy];
+        sharedInstance.messages = [NSMutableArray array];
+        sharedInstance.messagesExpanded = [NSMutableSet set];
         
         sharedInstance.tableView = [[UITableView alloc] init];
         sharedInstance.tableView.delegate = sharedInstance;
@@ -80,43 +82,54 @@
 {
     DDLogMessage *message = _messages[indexPath.row];
     
-    NSString *prefix;
     switch (message->logFlag) {
         case LOG_FLAG_ERROR:
             cell.textLabel.textColor = [UIColor redColor];
-            prefix = @"Ⓔ";
             break;
             
         case LOG_FLAG_WARN:
             cell.textLabel.textColor = [UIColor orangeColor];
-            prefix = @"Ⓦ";
             break;
             
         case LOG_FLAG_DEBUG:
             cell.textLabel.textColor = [UIColor greenColor];
-            prefix = @"Ⓓ";
             break;
             
         case LOG_FLAG_VERBOSE:
             cell.textLabel.textColor = [UIColor blueColor];
-            prefix = @"Ⓥ";
             break;
             
         default:
             cell.textLabel.textColor = [UIColor whiteColor];
-            prefix = @"Ⓘ";
             break;
     }
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%@: %@ %@", [_dateFormatter stringFromDate:message->timestamp], prefix, message->logMsg];
-    cell.textLabel.font = [UIFont boldSystemFontOfSize:9];
+    cell.textLabel.text = [self textOfMessageForIndexPath:indexPath];
+    cell.textLabel.font = [self fontOfMessage];
+    cell.textLabel.numberOfLines = 0;
     cell.backgroundColor = [UIColor clearColor];
+}
+
+- (NSString*)textOfMessageForIndexPath:(NSIndexPath*)indexPath
+{
+    DDLogMessage *message = _messages[indexPath.row];
+    if ([_messagesExpanded containsObject:@(indexPath.row)]) {
+        return [NSString stringWithFormat:@"[%@] %s:%d [%s]", [_dateFormatter stringFromDate:message->timestamp], message->file, message->lineNumber, message->function];
+    } else {
+        return [NSString stringWithFormat:@"[%@] %@", [_dateFormatter stringFromDate:message->timestamp], message->logMsg];
+    }
+}
+
+- (UIFont*)fontOfMessage
+{
+    return [UIFont boldSystemFontOfSize:9];
 }
 
 #pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 20;
+    NSString *messageText = [self textOfMessageForIndexPath:indexPath];
+    return [messageText sizeWithFont:[self fontOfMessage] constrainedToSize:CGSizeMake(self.tableView.bounds.size.width - 30, FLT_MAX)].height + kSPUILoggerMessageMargin;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -135,10 +148,14 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    DDLogMessage *message = _messages[indexPath.row];
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@: %s %d", [_dateFormatter stringFromDate:message->timestamp], message->function, message->lineNumber];
+    NSNumber *index = @(indexPath.row);
+    if ([_messagesExpanded containsObject:index]) {
+        [_messagesExpanded removeObject:index];
+    } else {
+        [_messagesExpanded addObject:index];
+    }
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
 }
 
 #pragma mark - public methods
