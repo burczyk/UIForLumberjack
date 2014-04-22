@@ -54,16 +54,6 @@
     });
 }
 
-- (id <DDLogFormatter>)logFormatter
-{
-    return self.logFormatter;
-}
-
-- (void)setLogFormatter:(id <DDLogFormatter>)formatter
-{
-    self.logFormatter = formatter;
-}
-
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
