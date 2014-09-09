@@ -32,7 +32,7 @@
         sharedInstance.tableView.dataSource = sharedInstance;
         [sharedInstance.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"LogCell"];
         sharedInstance.tableView.backgroundColor = [UIColor blackColor];
-        sharedInstance.tableView.alpha = 0.7f;
+        sharedInstance.tableView.alpha = 0.8f;
         sharedInstance.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         
         sharedInstance.dateFormatter = [[NSDateFormatter alloc] init];
@@ -125,7 +125,6 @@
 #pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *messageText = [self textOfMessageForIndexPath:indexPath];
     NSString *messageText = [self textOfMessageForIndexPath:indexPath];
 #if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_7_0
     return [messageText sizeWithFont:[self fontOfMessage] constrainedToSize:CGSizeMake(self.tableView.bounds.size.width - 30, FLT_MAX)].height + kSPUILoggerMessageMargin;
