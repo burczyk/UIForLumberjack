@@ -32,12 +32,11 @@
         sharedInstance.tableView.dataSource = sharedInstance;
         [sharedInstance.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"LogCell"];
         sharedInstance.tableView.backgroundColor = [UIColor blackColor];
-        sharedInstance.tableView.alpha = 0.9f;
+        sharedInstance.tableView.alpha = 0.7f;
         sharedInstance.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         
         sharedInstance.dateFormatter = [[NSDateFormatter alloc] init];
-        sharedInstance.dateFormatter.dateStyle = NSDateFormatterNoStyle;
-        sharedInstance.dateFormatter.timeStyle = NSDateFormatterMediumStyle;
+        [sharedInstance.dateFormatter setDateFormat:@"HH:mm:ss:SSS"];
     });
     return sharedInstance;
 }
@@ -48,9 +47,17 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         [_messages addObject:logMessage];
         
+        BOOL scroll = NO;
+        if(_tableView.contentOffset.y + _tableView.bounds.size.height >= _tableView.contentSize.height)
+            scroll = YES;
+        
+        
         NSIndexPath *indexPath = [NSIndexPath indexPathForRow:_messages.count-1 inSection:0];
         [_tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationBottom];
-        [_tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+        
+        if(scroll) {
+            [_tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+        }
     });
 }
 
@@ -119,7 +126,12 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString *messageText = [self textOfMessageForIndexPath:indexPath];
+    NSString *messageText = [self textOfMessageForIndexPath:indexPath];
+#if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_7_0
     return [messageText sizeWithFont:[self fontOfMessage] constrainedToSize:CGSizeMake(self.tableView.bounds.size.width - 30, FLT_MAX)].height + kSPUILoggerMessageMargin;
+#else
+    return ceil([messageText boundingRectWithSize:CGSizeMake(self.tableView.bounds.size.width - 30, FLT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[self fontOfMessage]} context:nil].size.height + kSPUILoggerMessageMargin);
+#endif
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
