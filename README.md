@@ -10,7 +10,13 @@ UIForLumberjack
 How to use it?
 --------------
 
-All you have to do is to add new logger:
+Install from cocoapods: 
+
+`pod UIForLumberjack` 
+
+or just drag&drop `UIForLumberjack.h` and `UIForLumberjack.m` to your project.
+
+In your code all you have to do is to add a new logger:
 ```objective-c
 [DDLog addLogger:[UIForLumberjack sharedInstance]];
 ```
