@@ -6,18 +6,16 @@
 //  Copyright (c) 2014 Sigmapoint. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "DDLog.h"
+#import <UIKit/UIKit.h>
+#import <CocoaLumberjack/CocoaLumberjack.h>
 
-#define kSPUILoggerMessageMargin 10
+@interface UIForLumberjack : NSObject <DDLogger>
 
-@interface UIForLumberjack : NSObject <UITableViewDataSource, UITableViewDelegate, DDLogger>
++ (instancetype)sharedInstance;
 
-@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, readonly) UITableView *tableView;
 
-+ (UIForLumberjack*) sharedInstance;
-
-- (void)showLogInView:(UIView*)view;
+- (void)showLogInView:(UIView *)view;
 - (void)hideLog;
 
 @end
