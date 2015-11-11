@@ -3,7 +3,7 @@
 
 target "UIForLumberjack" do
 
-pod 'CocoaLumberjack'
+pod 'CocoaLumberjack', '~> 2.0' 
 
 end
 

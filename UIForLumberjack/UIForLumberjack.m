@@ -8,40 +8,62 @@
 
 #import "UIForLumberjack.h"
 
-@interface UIForLumberjack ()
+NSString *const LogCellReuseIdentifier = @"LogCell";
 
-@property (nonatomic, strong) id<DDLogFormatter> logFormatter;
-@property (nonatomic, strong) NSMutableArray *messages;
-@property (nonatomic, strong) NSMutableSet *messagesExpanded;
-@property (nonatomic, strong) NSDateFormatter *dateFormatter;
+@interface UIForLumberjack () <UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic) UITableView *tableView;
+
+@property (nonatomic) NSMutableArray *messages;
+@property (nonatomic) NSMutableSet *messagesExpanded;
+@property (nonatomic) NSDateFormatter *dateFormatter;
 
 @end
 
 @implementation UIForLumberjack
 
-+ (UIForLumberjack*) sharedInstance {
+#pragma mark - Class Methods
+
++ (UIForLumberjack *)sharedInstance
+{
     static UIForLumberjack *sharedInstance;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedInstance = [[UIForLumberjack alloc] init];
-        sharedInstance.messages = [NSMutableArray array];
-        sharedInstance.messagesExpanded = [NSMutableSet set];
-        
-        sharedInstance.tableView = [[UITableView alloc] init];
-        sharedInstance.tableView.delegate = sharedInstance;
-        sharedInstance.tableView.dataSource = sharedInstance;
-        [sharedInstance.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"LogCell"];
-        sharedInstance.tableView.backgroundColor = [UIColor blackColor];
-        sharedInstance.tableView.alpha = 0.8f;
-        sharedInstance.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        
-        sharedInstance.dateFormatter = [[NSDateFormatter alloc] init];
-        [sharedInstance.dateFormatter setDateFormat:@"HH:mm:ss:SSS"];
     });
     return sharedInstance;
 }
 
+#pragma mark - Initialization
+
+- (instancetype)init;
+{
+    self = [super init];
+    if (!self) {
+        return nil;
+    }
+
+    self.messages = [NSMutableArray array];
+    self.messagesExpanded = [NSMutableSet set];
+
+    self.tableView = [[UITableView alloc] init];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:LogCellReuseIdentifier];
+    self.tableView.backgroundColor = [UIColor blackColor];
+    self.tableView.alpha = 0.8f;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+
+    self.dateFormatter = [[NSDateFormatter alloc] init];
+    [self.dateFormatter setDateFormat:@"HH:mm:ss:SSS"];
+
+    return self;
+}
+
 #pragma mark - DDLogger
+
+@synthesize logFormatter;
+
 - (void)logMessage:(DDLogMessage *)logMessage
 {
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -62,6 +84,7 @@
 }
 
 #pragma mark - UITableViewDataSource
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return _messages.count;
@@ -69,67 +92,23 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellIdentifier = @"LogCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:LogCellReuseIdentifier forIndexPath:indexPath];
     [self configureCell:cell forRowAtIndexPath:indexPath];
     return cell;
 }
 
-- (void)configureCell:(UITableViewCell*)cell forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    DDLogMessage *message = _messages[indexPath.row];
-    
-    switch (message->logFlag) {
-        case LOG_FLAG_ERROR:
-            cell.textLabel.textColor = [UIColor redColor];
-            break;
-            
-        case LOG_FLAG_WARN:
-            cell.textLabel.textColor = [UIColor orangeColor];
-            break;
-            
-        case LOG_FLAG_DEBUG:
-            cell.textLabel.textColor = [UIColor greenColor];
-            break;
-            
-        case LOG_FLAG_VERBOSE:
-            cell.textLabel.textColor = [UIColor blueColor];
-            break;
-            
-        default:
-            cell.textLabel.textColor = [UIColor whiteColor];
-            break;
-    }
-    
-    cell.textLabel.text = [self textOfMessageForIndexPath:indexPath];
-    cell.textLabel.font = [self fontOfMessage];
-    cell.textLabel.numberOfLines = 0;
-    cell.backgroundColor = [UIColor clearColor];
-}
-
-- (NSString*)textOfMessageForIndexPath:(NSIndexPath*)indexPath
-{
-    DDLogMessage *message = _messages[indexPath.row];
-    if ([_messagesExpanded containsObject:@(indexPath.row)]) {
-        return [NSString stringWithFormat:@"[%@] %s:%d [%s]", [_dateFormatter stringFromDate:message->timestamp], message->file, message->lineNumber, message->function];
-    } else {
-        return [NSString stringWithFormat:@"[%@] %@", [_dateFormatter stringFromDate:message->timestamp], message->logMsg];
-    }
-}
-
-- (UIFont*)fontOfMessage
-{
-    return [UIFont boldSystemFontOfSize:9];
-}
-
 #pragma mark - UITableViewDelegate
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString *messageText = [self textOfMessageForIndexPath:indexPath];
+
+    CGFloat const messageMargin = 10.0;
+
 #if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_7_0
-    return [messageText sizeWithFont:[self fontOfMessage] constrainedToSize:CGSizeMake(self.tableView.bounds.size.width - 30, FLT_MAX)].height + kSPUILoggerMessageMargin;
+    return [messageText sizeWithFont:[self fontOfMessage] constrainedToSize:CGSizeMake(self.tableView.bounds.size.width - 30, FLT_MAX)].height + messageMargin;
 #else
-    return ceil([messageText boundingRectWithSize:CGSizeMake(self.tableView.bounds.size.width - 30, FLT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[self fontOfMessage]} context:nil].size.height + kSPUILoggerMessageMargin);
+    return ceil([messageText boundingRectWithSize:CGSizeMake(self.tableView.bounds.size.width - 30, FLT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[self fontOfMessage]} context:nil].size.height + messageMargin);
 #endif
 }
 
@@ -159,7 +138,57 @@
     [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
 }
 
-#pragma mark - public methods
+#pragma mark - Private Methods
+
+- (void)configureCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    DDLogMessage *message = _messages[indexPath.row];
+
+    switch (message.flag) {
+        case DDLogFlagError:
+            cell.textLabel.textColor = [UIColor redColor];
+            break;
+
+        case DDLogFlagWarning:
+            cell.textLabel.textColor = [UIColor orangeColor];
+            break;
+
+        case DDLogFlagDebug:
+            cell.textLabel.textColor = [UIColor greenColor];
+            break;
+
+        case DDLogFlagVerbose:
+            cell.textLabel.textColor = [UIColor blueColor];
+            break;
+
+        default:
+            cell.textLabel.textColor = [UIColor whiteColor];
+            break;
+    }
+
+    cell.textLabel.text = [self textOfMessageForIndexPath:indexPath];
+    cell.textLabel.font = [self fontOfMessage];
+    cell.textLabel.numberOfLines = 0;
+    cell.backgroundColor = [UIColor clearColor];
+}
+
+- (NSString *)textOfMessageForIndexPath:(NSIndexPath *)indexPath
+{
+    DDLogMessage *message = _messages[indexPath.row];
+    if ([_messagesExpanded containsObject:@(indexPath.row)]) {
+        return [NSString stringWithFormat:@"[%@] %@:%lu [%@]", [_dateFormatter stringFromDate:message.timestamp], message.file, (unsigned long)message.line, message.function];
+    } else {
+        return [NSString stringWithFormat:@"[%@] %@", [_dateFormatter stringFromDate:message.timestamp], message.message];
+    }
+}
+
+- (UIFont *)fontOfMessage
+{
+    return [UIFont boldSystemFontOfSize:9];
+}
+
+#pragma mark - Public Methods
+
 - (void)showLogInView:(UIView*)view
 {
     [view addSubview:self.tableView];
