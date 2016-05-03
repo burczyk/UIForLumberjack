@@ -17,5 +17,6 @@
 
 - (void)showLogInView:(UIView *)view;
 - (void)hideLog;
+- (void)clearLog;
 
 @end

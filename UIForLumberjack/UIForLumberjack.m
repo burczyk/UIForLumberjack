@@ -203,4 +203,11 @@ NSString *const LogCellReuseIdentifier = @"LogCell";
     [self.tableView removeFromSuperview];
 }
 
+- (void)clearLog
+{
+    [_messages removeAllObjects];
+    [_messagesExpanded removeAllObjects];
+    [self.tableView reloadData];
+}
+
 @end
