@@ -10,4 +10,3 @@ end
 target "UIForLumberjackTests" do
 
 end
-

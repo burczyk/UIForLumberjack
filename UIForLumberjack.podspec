@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
   s.name         = "UIForLumberjack"
-  s.version      = "1.0.3"
+  s.version      = "1.0.4"
   s.summary      = "iOS UI library to display CocoaLumberjack logs on iOS device"
 
   s.description  = <<-DESC
-                   
+
                    UIForLumberjack is a tool that allows you to see your CocoaLumberjack logs
                    on your iOS device. It creates additional logger which puts all the logs
                    to UITableView that can be displayed in any UIView. With UIForLumberjack you can
@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author             = { "Kamil Burczyk" => "kamil.burczyk@gmail.com" }
   s.platform     = :ios, '6.0'
-  s.source       = { :git => "https://github.com/burczyk/UIForLumberjack.git", :tag => "1.0.3" }
+  s.source       = { :git => "https://github.com/burczyk/UIForLumberjack.git", :tag => "1.0.4" }
   s.source_files  = 'UIForLumberjack', 'UIForLumberjack/**/*.{h,m}'
   s.exclude_files = 'UIForLumberjackExample'
   s.frameworks = 'UIKit', 'Foundation'
