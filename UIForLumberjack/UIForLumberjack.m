@@ -69,6 +69,8 @@ NSString *const LogCellReuseIdentifier = @"LogCell";
     dispatch_async(dispatch_get_main_queue(), ^{
         [_messages addObject:logMessage];
         
+        if (_tableView.superview == nil) { return; }
+        
         BOOL scroll = NO;
         if(_tableView.contentOffset.y + _tableView.bounds.size.height >= _tableView.contentSize.height)
             scroll = YES;
